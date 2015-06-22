@@ -1,18 +1,20 @@
 //
-//  LoginViewController.m
+//  FirstViewController.m
 //  
 //
 //  Created by Paul on 6/21/15.
 //
 //
 
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface FirstViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 /*
 #pragma mark - Navigation
 
@@ -34,12 +38,18 @@
 }
 */
 
-- (IBAction)buttonTapped:(id)sender {
+- (IBAction)push:(id)sender {
+
+    SecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondView"];
     
-    if (_delegate && [_delegate respondsToSelector:@selector(loginViewControllerDidDismiss:)]) {
-        [_delegate loginViewControllerDidDismiss:self];
-    }
+    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
+    
+    [self pushViewController:secondViewController
+               withCondition:NO
+                 withBarrier:loginViewController];
     
 }
+
+
 
 @end

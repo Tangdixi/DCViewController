@@ -6,14 +6,16 @@
 //  Copyright (c) 2015 DC. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "LoginViewController.h"
+#import "DCViewController.h"
+#import "BarrierViewController.h"
 
-@interface ViewController ()<LoginViewControllerDelegate>
+@interface DCViewController ()<BarrierViewControllerDelegate>
+
+@property (strong, nonatomic) UIViewController *destinationViewController;
 
 @end
 
-@implementation ViewController
+@implementation DCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,32 +28,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setDestinationViewController:(UIViewController *)destinationViewController {
-    
-    _destinationViewController = destinationViewController;
-    
-}
-
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
-    withTemporayController:(UIViewController *)temporaryController{
+               withBarrier:(BarrierViewController *)barrierViewController {
     
     _destinationViewController = destinateViewController;
     
     if (! condition) {
         
-        LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
-        loginViewController.delegate = self;
+        barrierViewController.delegate = self;
         
-        [self presentViewController:loginViewController
-                           animated:YES 
+        [self presentViewController:barrierViewController
+                           animated:YES
                          completion:nil];
         
     }
     
 }
 
-- (void)loginViewControllerDidDismiss:(LoginViewController *)loginViewController {
+#pragma mark - Custom Accessors
+
+- (void)setAllowSwipe:(BOOL)allowSwipe {
+    
+    _allowSwipe = allowSwipe;
+
+    if (allowSwipe) {
+        
+        __weak id weakSelf = self;
+        self.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
+
+    }
+
+}
+
+#pragma mark - BarrierViewController Delegate
+
+- (void)barrierViewControllerDidDismiss:(BarrierViewController *)barrierViewController {
     
     [self dismissViewControllerAnimated:YES
                              completion:^{
@@ -60,12 +72,6 @@
                                              animated:YES];
         
     }];
-    
-}
-
-- (IBAction)push:(id)sender {
-    
-    [self pushViewController:self.destinationViewController withCondition:NO withTemporayController:nil];
     
 }
 

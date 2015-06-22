@@ -1,20 +1,18 @@
 //
-//  FirstViewController.m
+//  LoginViewController.m
 //  
 //
-//  Created by Paul on 6/21/15.
+//  Created by Paul on 6/22/15.
 //
 //
 
-#import "FirstViewController.h"
-#import "SecondViewController.h"
 #import "LoginViewController.h"
 
-@interface FirstViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,8 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
 /*
 #pragma mark - Navigation
 
@@ -37,15 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)push:(id)sender {
-
-    SecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondView"];
-    
-    [self pushViewController:secondViewController withCondition:NO withTemporayController:nil];
-    
-}
-
-
 
 @end

@@ -70,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="JkD-yC-Gvz" eventType="touchUpInside" id="8Ln-4m-bpD"/>
+                                    <action selector="ok:" destination="JkD-yC-Gvz" eventType="touchUpInside" id="1OB-up-bzI"/>
                                 </connections>
                             </button>
                         </subviews>

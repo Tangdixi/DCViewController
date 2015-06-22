@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811C28EC1B384DEC00FE5B06 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811C28EB1B384DEC00FE5B06 /* LoginViewController.m */; };
+		811C28F21B38530300FE5B06 /* BarrierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811C28EF1B38530300FE5B06 /* BarrierViewController.m */; };
+		811C28F31B38530300FE5B06 /* DCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811C28F11B38530300FE5B06 /* DCViewController.m */; };
 		815D8F921B36DB4700E3260D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8F911B36DB4700E3260D /* main.m */; };
 		815D8F951B36DB4700E3260D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8F941B36DB4700E3260D /* AppDelegate.m */; };
-		815D8F981B36DB4700E3260D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8F971B36DB4700E3260D /* ViewController.m */; };
 		815D8F9B1B36DB4700E3260D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815D8F991B36DB4700E3260D /* Main.storyboard */; };
 		815D8F9D1B36DB4700E3260D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815D8F9C1B36DB4700E3260D /* Images.xcassets */; };
 		815D8FA01B36DB4700E3260D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815D8F9E1B36DB4700E3260D /* LaunchScreen.xib */; };
 		815D8FAC1B36DB4700E3260D /* Condition_ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8FAB1B36DB4700E3260D /* Condition_ViewControllerTests.m */; };
-		815D8FB71B36E6B200E3260D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8FB61B36E6B200E3260D /* LoginViewController.m */; };
 		815D8FBA1B36EA9C00E3260D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8FB91B36EA9C00E3260D /* FirstViewController.m */; };
 		815D8FBD1B36EB5600E3260D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D8FBC1B36EB5600E3260D /* SecondViewController.m */; };
 /* End PBXBuildFile section */
@@ -30,21 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		811C28EA1B384DEC00FE5B06 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		811C28EB1B384DEC00FE5B06 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		811C28EE1B38530300FE5B06 /* BarrierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrierViewController.h; sourceTree = "<group>"; };
+		811C28EF1B38530300FE5B06 /* BarrierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrierViewController.m; sourceTree = "<group>"; };
+		811C28F01B38530300FE5B06 /* DCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCViewController.h; sourceTree = "<group>"; };
+		811C28F11B38530300FE5B06 /* DCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCViewController.m; sourceTree = "<group>"; };
 		815D8F8C1B36DB4700E3260D /* Condition ViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Condition ViewController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815D8F901B36DB4700E3260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815D8F911B36DB4700E3260D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815D8F931B36DB4700E3260D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815D8F941B36DB4700E3260D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815D8F961B36DB4700E3260D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		815D8F971B36DB4700E3260D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		815D8F9A1B36DB4700E3260D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815D8F9C1B36DB4700E3260D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		815D8F9F1B36DB4700E3260D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		815D8FA51B36DB4700E3260D /* Condition ViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Condition ViewControllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815D8FAA1B36DB4700E3260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815D8FAB1B36DB4700E3260D /* Condition_ViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Condition_ViewControllerTests.m; sourceTree = "<group>"; };
-		815D8FB51B36E6B200E3260D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		815D8FB61B36E6B200E3260D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		815D8FB81B36EA9C00E3260D /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		815D8FB91B36EA9C00E3260D /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		815D8FBB1B36EB5600E3260D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -69,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811C28ED1B38530300FE5B06 /* DCViewController */ = {
+			isa = PBXGroup;
+			children = (
+				811C28EE1B38530300FE5B06 /* BarrierViewController.h */,
+				811C28EF1B38530300FE5B06 /* BarrierViewController.m */,
+				811C28F01B38530300FE5B06 /* DCViewController.h */,
+				811C28F11B38530300FE5B06 /* DCViewController.m */,
+			);
+			path = DCViewController;
+			sourceTree = "<group>";
+		};
 		815D8F831B36DB4700E3260D = {
 			isa = PBXGroup;
 			children = (
@@ -90,16 +104,15 @@
 		815D8F8E1B36DB4700E3260D /* Condition ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				811C28ED1B38530300FE5B06 /* DCViewController */,
 				815D8F931B36DB4700E3260D /* AppDelegate.h */,
 				815D8F941B36DB4700E3260D /* AppDelegate.m */,
-				815D8F961B36DB4700E3260D /* ViewController.h */,
-				815D8F971B36DB4700E3260D /* ViewController.m */,
 				815D8FB81B36EA9C00E3260D /* FirstViewController.h */,
 				815D8FB91B36EA9C00E3260D /* FirstViewController.m */,
 				815D8FBB1B36EB5600E3260D /* SecondViewController.h */,
 				815D8FBC1B36EB5600E3260D /* SecondViewController.m */,
-				815D8FB51B36E6B200E3260D /* LoginViewController.h */,
-				815D8FB61B36E6B200E3260D /* LoginViewController.m */,
+				811C28EA1B384DEC00FE5B06 /* LoginViewController.h */,
+				811C28EB1B384DEC00FE5B06 /* LoginViewController.m */,
 				815D8F991B36DB4700E3260D /* Main.storyboard */,
 				815D8F9C1B36DB4700E3260D /* Images.xcassets */,
 				815D8F9E1B36DB4700E3260D /* LaunchScreen.xib */,
@@ -234,11 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811C28F21B38530300FE5B06 /* BarrierViewController.m in Sources */,
 				815D8FBD1B36EB5600E3260D /* SecondViewController.m in Sources */,
-				815D8FB71B36E6B200E3260D /* LoginViewController.m in Sources */,
-				815D8F981B36DB4700E3260D /* ViewController.m in Sources */,
 				815D8FBA1B36EA9C00E3260D /* FirstViewController.m in Sources */,
+				811C28EC1B384DEC00FE5B06 /* LoginViewController.m in Sources */,
 				815D8F951B36DB4700E3260D /* AppDelegate.m in Sources */,
+				811C28F31B38530300FE5B06 /* DCViewController.m in Sources */,
 				815D8F921B36DB4700E3260D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +448,7 @@
 				815D8FB11B36DB4700E3260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		815D8FB21B36DB4700E3260D /* Build configuration list for PBXNativeTarget "Condition ViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +457,7 @@
 				815D8FB41B36DB4700E3260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

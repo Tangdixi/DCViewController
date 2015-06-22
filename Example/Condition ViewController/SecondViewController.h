@@ -6,8 +6,8 @@
 //
 //
 
-#import "ViewController.h"
+#import "DCViewController.h"
 
-@interface SecondViewController : ViewController
+@interface SecondViewController : DCViewController
 
 @end

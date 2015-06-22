@@ -8,13 +8,15 @@
 
 @import UIKit;
 
-@interface ViewController : UIViewController
+@class BarrierViewController;
 
-@property (strong, nonatomic) UIViewController *destinationViewController;
+@interface DCViewController : UIViewController
+
+@property (assign, nonatomic) BOOL allowSwipe;
 
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
-    withTemporayController:(UIViewController *)temporaryController;
+               withBarrier:(BarrierViewController *)barrierViewController;
 
 @end
 
