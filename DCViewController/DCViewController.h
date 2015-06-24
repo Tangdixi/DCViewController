@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 DC. All rights reserved.
 //
 
-@import UIKit;
+#define kDCBarrierDismissNotification @"barrierViewWillDismiss"
 
-@class BarrierViewController;
+@import UIKit;
 
 @interface DCViewController : UIViewController
 
@@ -16,7 +16,6 @@
 
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
-               withBarrier:(BarrierViewController *)barrierViewController;
+               withBarrier:(UIViewController *)barrierViewController;
 
 @end
-

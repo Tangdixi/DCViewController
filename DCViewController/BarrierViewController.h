@@ -6,8 +6,6 @@
 //
 //
 
-#define kDCBarrierViewControllerWillDismissNotification @"barrierViewWillDismiss"
-
 @import UIKit;
 
 @class BarrierViewController;
