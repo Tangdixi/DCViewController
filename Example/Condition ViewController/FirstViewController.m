@@ -42,7 +42,7 @@
 
     SecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondView"];
     
-    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginView"];
+    UINavigationController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"navigator"];
     
     [self pushViewController:secondViewController
                withCondition:NO

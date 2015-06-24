@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "DCViewController.h"
 
 @interface LoginViewController ()
 
@@ -26,8 +27,12 @@
 
 - (IBAction)ok:(id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:kDCBarrierViewControllerWillDismissNotification
-                                                       object:nil];
+    [self dismissViewControllerAnimated:YES
+                             completion:^{
+                                 [[NSNotificationCenter defaultCenter]postNotificationName:kDCBarrierDismissNotification
+                                                                                    object:nil];
+                             }];
+    
 }
 
 @end

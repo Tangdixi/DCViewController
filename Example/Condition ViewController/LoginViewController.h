@@ -6,8 +6,8 @@
 //
 //
 
-#import "BarrierViewController.h"
+@import UIKit;
 
-@interface LoginViewController :BarrierViewController
+@interface LoginViewController :UIViewController;
 
 @end

@@ -7,9 +7,8 @@
 //
 
 #import "DCViewController.h"
-#import "BarrierViewController.h"
 
-@interface DCViewController ()<BarrierViewControllerDelegate>
+@interface DCViewController ()
 
 @property (strong, nonatomic) UIViewController *destinationViewController;
 
@@ -21,6 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(barrierViewControllerWillDismiss)
+                                                name:kDCBarrierDismissNotification
+                                              object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,13 +34,11 @@
 
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
-               withBarrier:(BarrierViewController *)barrierViewController {
+               withBarrier:(UIViewController *)barrierViewController {
     
     _destinationViewController = destinateViewController;
     
     if (! condition) {
-        
-        barrierViewController.delegate = self;
         
         [self presentViewController:barrierViewController
                            animated:YES
@@ -61,17 +63,11 @@
 
 }
 
-#pragma mark - BarrierViewController Delegate
+- (void)barrierViewControllerWillDismiss {
 
-- (void)barrierViewControllerDidDismiss:(BarrierViewController *)barrierViewController {
-    
-    [self dismissViewControllerAnimated:YES
-                             completion:^{
-                                 
-        [self.navigationController pushViewController:self.destinationViewController
-                                             animated:YES];
-        
-    }];
+    [self.navigationController pushViewController:self.destinationViewController
+                                         animated:YES];
+
     
 }
 

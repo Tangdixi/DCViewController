@@ -38,7 +38,7 @@
                             <constraint firstAttribute="centerX" secondItem="FTD-EU-MLp" secondAttribute="centerX" id="XeP-3N-7xd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gb0-2x-GAk"/>
+                    <navigationItem key="navigationItem" title="First View Controller" id="gb0-2x-GAk"/>
                     <connections>
                         <segue destination="Ibj-xd-qwh" kind="push" id="8Fa-cO-JDh"/>
                     </connections>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="-122"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Barrier-->
         <scene sceneID="MHg-ZR-yb6">
             <objects>
-                <viewController storyboardIdentifier="loginView" id="JkD-yC-Gvz" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="JkD-yC-Gvz" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yM5-1m-4oD"/>
                         <viewControllerLayoutGuide type="bottom" id="ueb-Ik-ll3"/>
@@ -60,31 +60,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-ht-Odn">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <rect key="frame" x="284" y="285" width="32" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="e9d-Dd-3So"/>
-                                    <constraint firstAttribute="width" constant="30" id="ygz-01-Xhp"/>
+                                    <constraint firstAttribute="width" constant="32" id="ygz-01-Xhp"/>
                                 </constraints>
-                                <state key="normal" title="Ok">
+                                <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ok:" destination="JkD-yC-Gvz" eventType="touchUpInside" id="1OB-up-bzI"/>
+                                    <segue destination="OSZ-7h-0Hk" kind="show" id="W1M-13-oQP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="h8U-ht-Odn" secondAttribute="centerX" id="F2g-TD-Cef"/>
                             <constraint firstAttribute="centerY" secondItem="h8U-ht-Odn" secondAttribute="centerY" id="cPJ-ku-4kv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Barrier" id="9SU-Yh-jYx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1v-gn-7il" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="505"/>
+            <point key="canvasLocation" x="1936" y="693"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="gMc-aj-QiD">
@@ -124,6 +125,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="198-4X-HUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="87" y="-122"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ase-kv-1TQ">
+            <objects>
+                <navigationController storyboardIdentifier="navigator" automaticallyAdjustsScrollViewInsets="NO" id="2kY-ZD-3AV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tqH-BY-Cho">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JkD-yC-Gvz" kind="relationship" relationship="rootViewController" id="DH7-Ei-zyd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Fv-il-ccY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="693"/>
+        </scene>
+        <!--Barrier 2-->
+        <scene sceneID="6M4-xu-Wdr">
+            <objects>
+                <viewController storyboardIdentifier="loginView" id="OSZ-7h-0Hk" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AbL-uz-9sz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ROZ-IC-0uw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KGc-Rc-cOL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqI-hr-GNc">
+                                <rect key="frame" x="248" y="285" width="104" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y0O-x7-S3F"/>
+                                    <constraint firstAttribute="width" constant="104" id="eny-ho-HQ7"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss Barrier">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ok:" destination="OSZ-7h-0Hk" eventType="touchUpInside" id="qN5-SE-j4B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="HqI-hr-GNc" secondAttribute="centerY" id="BnA-hQ-Nad"/>
+                            <constraint firstAttribute="centerX" secondItem="HqI-hr-GNc" secondAttribute="centerX" id="GRd-DT-hat"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Barrier 2" id="WD8-sk-S2g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BtK-NQ-RGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2648" y="693"/>
         </scene>
     </scenes>
 </document>
