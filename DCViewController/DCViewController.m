@@ -45,6 +45,12 @@
                          completion:nil];
         
     }
+    else {
+        
+        [self.navigationController pushViewController:destinateViewController
+                                             animated:YES];
+        
+    }
     
 }
 
