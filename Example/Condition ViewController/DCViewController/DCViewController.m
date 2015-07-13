@@ -32,13 +32,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self
+                                                   name:kDCBarrierDismissNotification
+                                                 object:nil];
+    
+}
+
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
                withBarrier:(UIViewController *)barrierViewController {
     
-    _destinationViewController = destinateViewController;
-    
     if (! condition) {
+        
+        _destinationViewController = destinateViewController;
         
         [self presentViewController:barrierViewController
                            animated:YES
@@ -64,16 +72,20 @@
         
         __weak id weakSelf = self;
         self.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
-
+        
     }
-
+    
 }
 
 - (void)barrierViewControllerWillDismiss {
-
-    [self.navigationController pushViewController:self.destinationViewController
-                                         animated:YES];
-
+    
+    if (self.destinationViewController) {
+        [self.navigationController pushViewController:self.destinationViewController
+                                             animated:YES];
+        
+        _destinationViewController = nil;
+    
+    }
     
 }
 
