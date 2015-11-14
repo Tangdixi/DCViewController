@@ -10,6 +10,8 @@
 
 @import UIKit;
 
+typedef void (^BarrierDismissBlock)(void);
+
 @interface DCViewController : UIViewController
 
 @property (assign, nonatomic) BOOL allowSwipe;
@@ -17,5 +19,9 @@
 - (void)pushViewController:(UIViewController *)destinateViewController
              withCondition:(BOOL)condition
                withBarrier:(UIViewController *)barrierViewController;
+
+- (void)performBlock:(BarrierDismissBlock)block
+       withCondition:(BOOL)condition
+         withBarrier:(UIViewController *)barrierViewController;
 
 @end

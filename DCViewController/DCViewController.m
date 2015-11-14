@@ -11,6 +11,7 @@
 @interface DCViewController ()
 
 @property (strong, nonatomic) UIViewController *destinationViewController;
+@property (copy, nonatomic) BarrierDismissBlock barrierDismissBlock;
 
 @end
 
@@ -62,6 +63,27 @@
     
 }
 
+- (void)performBlock:(BarrierDismissBlock)block
+       withCondition:(BOOL)condition
+         withBarrier:(UIViewController *)barrierViewController {
+    
+    if (! condition) {
+        
+        _barrierDismissBlock = block;
+        
+        [self presentViewController:barrierViewController
+                           animated:YES
+                         completion:nil];
+        
+    }
+    else {
+        
+        block();
+        
+    }
+    
+}
+
 #pragma mark - Custom Accessors
 
 - (void)setAllowSwipe:(BOOL)allowSwipe {
@@ -85,6 +107,12 @@
         
         _destinationViewController = nil;
     
+    }
+    
+    if (_barrierDismissBlock != nil) {
+        
+        self.barrierDismissBlock();
+        
     }
     
 }

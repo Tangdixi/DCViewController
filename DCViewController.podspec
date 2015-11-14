@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DCViewController"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "Some extension for UIViewController"
 
   s.homepage     = "https://github.com/Tangdixi/DCViewController" 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.source       = { 
 	:git => "https://github.com/Tangdixi/DCViewController.git", 
-	:tag => "1.1.1"
+	:tag => "1.1.2"
   }
 
   s.source_files  = 'DCViewController/*.{h,m}'
